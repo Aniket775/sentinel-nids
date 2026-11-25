@@ -1,0 +1,1 @@
+"""Sentinel NIDS FastAPI Service."""

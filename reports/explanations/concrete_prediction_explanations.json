@@ -1,0 +1,158 @@
+[
+  {
+    "predicted_class": "BruteForce",
+    "predicted_class_idx": 0,
+    "top_features": [
+      {
+        "feature": "Destination Port",
+        "actual_value": 21.0,
+        "shap_value": 7.1581,
+        "impact": "Increases Attack Likelihood"
+      },
+      {
+        "feature": "min_seg_size_forward",
+        "actual_value": 32.0,
+        "shap_value": 2.0546,
+        "impact": "Increases Attack Likelihood"
+      },
+      {
+        "feature": "Packet Length Mean",
+        "actual_value": 11.44,
+        "shap_value": 0.387,
+        "impact": "Increases Attack Likelihood"
+      },
+      {
+        "feature": "Subflow Fwd Bytes",
+        "actual_value": 98.0,
+        "shap_value": 0.3469,
+        "impact": "Increases Attack Likelihood"
+      },
+      {
+        "feature": "Fwd Packet Length Mean",
+        "actual_value": 10.8889,
+        "shap_value": 0.2314,
+        "impact": "Increases Attack Likelihood"
+      }
+    ],
+    "disclaimer": "NOTE: SHAP values represent statistical feature contributions toward the model's mathematical prediction. They do NOT establish causal network proof.",
+    "true_label": "BruteForce",
+    "sample_index": 40
+  },
+  {
+    "predicted_class": "DDoS",
+    "predicted_class_idx": 1,
+    "top_features": [
+      {
+        "feature": "Fwd Packet Length Max",
+        "actual_value": 20.0,
+        "shap_value": 2.3462,
+        "impact": "Increases Attack Likelihood"
+      },
+      {
+        "feature": "Bwd Packet Length Std",
+        "actual_value": 1548.6709,
+        "shap_value": 1.9174,
+        "impact": "Increases Attack Likelihood"
+      },
+      {
+        "feature": "Subflow Fwd Bytes",
+        "actual_value": 26.0,
+        "shap_value": 1.0841,
+        "impact": "Increases Attack Likelihood"
+      },
+      {
+        "feature": "Fwd Packet Length Mean",
+        "actual_value": 8.6667,
+        "shap_value": 0.6421,
+        "impact": "Increases Attack Likelihood"
+      },
+      {
+        "feature": "Destination Port",
+        "actual_value": 80.0,
+        "shap_value": 0.4482,
+        "impact": "Increases Attack Likelihood"
+      }
+    ],
+    "disclaimer": "NOTE: SHAP values represent statistical feature contributions toward the model's mathematical prediction. They do NOT establish causal network proof.",
+    "true_label": "DDoS",
+    "sample_index": 2
+  },
+  {
+    "predicted_class": "Normal",
+    "predicted_class_idx": 2,
+    "top_features": [
+      {
+        "feature": "Subflow Fwd Bytes",
+        "actual_value": 0.0,
+        "shap_value": 1.0408,
+        "impact": "Increases Attack Likelihood"
+      },
+      {
+        "feature": "Fwd Packet Length Mean",
+        "actual_value": 0.0,
+        "shap_value": -0.609,
+        "impact": "Decreases Attack Likelihood"
+      },
+      {
+        "feature": "Average Packet Size",
+        "actual_value": 0.0,
+        "shap_value": 0.4287,
+        "impact": "Increases Attack Likelihood"
+      },
+      {
+        "feature": "Destination Port",
+        "actual_value": 80.0,
+        "shap_value": -0.4195,
+        "impact": "Decreases Attack Likelihood"
+      },
+      {
+        "feature": "Fwd Packet Length Max",
+        "actual_value": 0.0,
+        "shap_value": -0.3461,
+        "impact": "Decreases Attack Likelihood"
+      }
+    ],
+    "disclaimer": "NOTE: SHAP values represent statistical feature contributions toward the model's mathematical prediction. They do NOT establish causal network proof.",
+    "true_label": "Normal",
+    "sample_index": 0
+  },
+  {
+    "predicted_class": "PortScan",
+    "predicted_class_idx": 3,
+    "top_features": [
+      {
+        "feature": "Packet Length Mean",
+        "actual_value": 2.0,
+        "shap_value": 3.7169,
+        "impact": "Increases Attack Likelihood"
+      },
+      {
+        "feature": "Bwd Packets/s",
+        "actual_value": 11764.7059,
+        "shap_value": 2.9534,
+        "impact": "Increases Attack Likelihood"
+      },
+      {
+        "feature": "PSH Flag Count",
+        "actual_value": 1.0,
+        "shap_value": 1.6645,
+        "impact": "Increases Attack Likelihood"
+      },
+      {
+        "feature": "Init_Win_bytes_forward",
+        "actual_value": 29200.0,
+        "shap_value": 0.9151,
+        "impact": "Increases Attack Likelihood"
+      },
+      {
+        "feature": "Subflow Bwd Packets",
+        "actual_value": 1.0,
+        "shap_value": 0.7514,
+        "impact": "Increases Attack Likelihood"
+      }
+    ],
+    "disclaimer": "NOTE: SHAP values represent statistical feature contributions toward the model's mathematical prediction. They do NOT establish causal network proof.",
+    "true_label": "PortScan",
+    "sample_index": 1812
+  }
+]

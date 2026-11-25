@@ -1,0 +1,367 @@
+@import "./tokens.css";
+
+/* Reset & Terminal Monospace Baseline */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 !important; /* Strictly square corners */
+}
+
+html, body {
+  background-color: var(--void);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+  cursor: crosshair;
+}
+
+/* Phosphor Glow Utilities */
+.glow {
+  text-shadow: 0 0 6px var(--phosphor-glow);
+}
+
+.phosphor-text {
+  color: var(--phosphor);
+  text-shadow: 0 0 6px var(--phosphor-glow);
+}
+
+.dim-text {
+  color: var(--dim);
+}
+
+/* Headings with VT323 Display */
+h1, .display-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  color: var(--phosphor);
+  text-shadow: 0 0 6px var(--phosphor-glow);
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+/* Blinking Block Cursor */
+@keyframes blink-cursor {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.blinking-cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 1em;
+  background-color: var(--phosphor);
+  vertical-align: -0.1em;
+  margin-left: 0.25rem;
+  animation: blink-cursor 1s infinite;
+  box-shadow: 0 0 6px var(--phosphor-glow);
+}
+
+/* Tabular Numbers */
+table, .tabular, [data-num] {
+  font-family: var(--font-tabular);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Terminal Window Panels */
+.terminal-window {
+  position: relative;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  margin-bottom: 1.5rem;
+}
+
+.terminal-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.35rem 0.75rem;
+  background: rgba(124, 255, 155, 0.04);
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.terminal-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--line);
+  display: inline-block;
+}
+
+.terminal-title {
+  color: var(--phosphor);
+  font-weight: 500;
+  text-shadow: 0 0 4px var(--phosphor-glow);
+}
+
+.terminal-path {
+  color: var(--dim);
+  font-size: 0.7rem;
+}
+
+.terminal-content {
+  padding: 1.5rem;
+}
+
+/* Corner Bracket Accents */
+.bracket-box {
+  position: relative;
+}
+
+.bracket-box::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid var(--phosphor);
+  border-left: 2px solid var(--phosphor);
+  pointer-events: none;
+}
+
+.bracket-box::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid var(--phosphor);
+  border-right: 2px solid var(--phosphor);
+  pointer-events: none;
+}
+
+/* Bracketed Action Buttons */
+button, .terminal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  color: var(--phosphor);
+  border: 1px solid var(--phosphor);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 0.85rem;
+  cursor: crosshair;
+  transition: all var(--motion-fast) var(--ease-out);
+  text-decoration: none;
+}
+
+button:hover, .terminal-btn:hover {
+  background: var(--phosphor);
+  color: var(--void);
+  box-shadow: 0 0 8px var(--phosphor-glow);
+}
+
+button:focus-visible, .terminal-btn:focus-visible {
+  outline: 2px solid var(--phosphor);
+  outline-offset: 2px;
+}
+
+button:disabled, .terminal-btn:disabled {
+  opacity: 0.35;
+  border-color: var(--dim);
+  color: var(--dim);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Bracketed Class Badges */
+.badge-normal {
+  color: var(--normal);
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+.badge-ddos {
+  color: var(--ddos);
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+.badge-portscan {
+  color: var(--portscan);
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+.badge-bruteforce {
+  color: var(--bruteforce);
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+/* Surface Overlays: Scanlines, Vignette, CRT Flicker */
+.crt-scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 80;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 1.5px,
+    rgba(0, 0, 0, 0.5) 1.5px,
+    rgba(0, 0, 0, 0.5) 3px
+  );
+  opacity: 0.06;
+}
+
+.crt-vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 81;
+  background: radial-gradient(circle at center, transparent 40%, rgba(5, 8, 6, 0.55) 100%);
+}
+
+@keyframes crt-flicker-anim {
+  0% { opacity: 0.005; }
+  50% { opacity: 0.02; }
+  100% { opacity: 0.005; }
+}
+
+.crt-flicker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 82;
+  background: var(--phosphor);
+  opacity: 0.01;
+  animation: crt-flicker-anim 6s infinite ease-in-out;
+}
+
+/* Glitch Trigger Animation */
+.glitch-active {
+  transform: translateX(3px);
+  text-shadow: 2px 0 var(--ddos), -2px 0 var(--normal);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crt-flicker {
+    display: none;
+  }
+  .glitch-active {
+    transform: none;
+    text-shadow: none;
+  }
+  .blinking-cursor {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Layout container */
+.app-container {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 34px; /* Space for tmux status bar */
+}
+
+/* Tmux Bottom Status Bar */
+.tmux-statusbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  z-index: 95;
+  user-select: none;
+}
+
+.tmux-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--phosphor);
+}
+
+.tmux-center {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.tmux-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--dim);
+}
+
+/* Custom Crosshair Cursor HUD */
+.cursor-hud {
+  position: fixed;
+  pointer-events: none;
+  z-index: 999;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--phosphor);
+  padding: 2px 4px;
+  background: rgba(5, 8, 6, 0.85);
+  border: 1px solid var(--line);
+  transform: translate(12px, 12px);
+  user-select: none;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-hud {
+    display: none !important;
+  }
+}

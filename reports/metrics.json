@@ -1,0 +1,393 @@
+{
+  "Random Forest": {
+    "val": {
+      "model_name": "Random Forest (Val)",
+      "accuracy": 0.9996,
+      "macro_f1": 0.9915,
+      "weighted_f1": 0.9996,
+      "precision": 0.9998,
+      "recall": 0.9837,
+      "roc_auc": 0.9997,
+      "per_class": {
+        "BruteForce": {
+          "precision": 1.0,
+          "recall": 0.9984,
+          "f1_score": 0.9992
+        },
+        "DDoS": {
+          "precision": 0.9994,
+          "recall": 0.9992,
+          "f1_score": 0.9993
+        },
+        "Normal": {
+          "precision": 0.9997,
+          "recall": 0.9999,
+          "f1_score": 0.9998
+        },
+        "PortScan": {
+          "precision": 1.0,
+          "recall": 0.9375,
+          "f1_score": 0.9677
+        }
+      },
+      "confusion_matrix": [
+        [
+          611,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          3577,
+          3,
+          0
+        ],
+        [
+          0,
+          2,
+          17639,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          30
+        ]
+      ],
+      "classes": [
+        "BruteForce",
+        "DDoS",
+        "Normal",
+        "PortScan"
+      ]
+    },
+    "test": {
+      "model_name": "Random Forest (Test)",
+      "accuracy": 0.9999,
+      "macro_f1": 0.992,
+      "weighted_f1": 0.9999,
+      "precision": 0.9922,
+      "recall": 0.9918,
+      "roc_auc": 1.0,
+      "per_class": {
+        "BruteForce": {
+          "precision": 1.0,
+          "recall": 0.9984,
+          "f1_score": 0.9992
+        },
+        "DDoS": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0
+        },
+        "Normal": {
+          "precision": 0.9999,
+          "recall": 0.9999,
+          "f1_score": 0.9999
+        },
+        "PortScan": {
+          "precision": 0.9688,
+          "recall": 0.9688,
+          "f1_score": 0.9688
+        }
+      },
+      "confusion_matrix": [
+        [
+          611,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          3580,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          17640,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          31
+        ]
+      ],
+      "classes": [
+        "BruteForce",
+        "DDoS",
+        "Normal",
+        "PortScan"
+      ]
+    },
+    "train_time_sec": 1.3933,
+    "inference_time_sec": 0.02346
+  },
+  "SVM": {
+    "val": {
+      "model_name": "SVM (Val)",
+      "accuracy": 0.8946,
+      "macro_f1": 0.6259,
+      "weighted_f1": 0.9175,
+      "precision": 0.5706,
+      "recall": 0.9483,
+      "roc_auc": 0.9927,
+      "per_class": {
+        "BruteForce": {
+          "precision": 0.2691,
+          "recall": 1.0,
+          "f1_score": 0.4241
+        },
+        "DDoS": {
+          "precision": 0.8952,
+          "recall": 0.9827,
+          "f1_score": 0.9369
+        },
+        "Normal": {
+          "precision": 0.9995,
+          "recall": 0.873,
+          "f1_score": 0.9319
+        },
+        "PortScan": {
+          "precision": 0.1186,
+          "recall": 0.9375,
+          "f1_score": 0.2105
+        }
+      },
+      "confusion_matrix": [
+        [
+          612,
+          0,
+          0,
+          0
+        ],
+        [
+          54,
+          3518,
+          8,
+          0
+        ],
+        [
+          1606,
+          412,
+          15400,
+          223
+        ],
+        [
+          2,
+          0,
+          0,
+          30
+        ]
+      ],
+      "classes": [
+        "BruteForce",
+        "DDoS",
+        "Normal",
+        "PortScan"
+      ]
+    },
+    "test": {
+      "model_name": "SVM (Test)",
+      "accuracy": 0.8976,
+      "macro_f1": 0.6358,
+      "weighted_f1": 0.9191,
+      "precision": 0.576,
+      "recall": 0.9572,
+      "roc_auc": 0.9944,
+      "per_class": {
+        "BruteForce": {
+          "precision": 0.2758,
+          "recall": 1.0,
+          "f1_score": 0.4324
+        },
+        "DDoS": {
+          "precision": 0.89,
+          "recall": 0.9835,
+          "f1_score": 0.9344
+        },
+        "Normal": {
+          "precision": 0.9997,
+          "recall": 0.8765,
+          "f1_score": 0.9341
+        },
+        "PortScan": {
+          "precision": 0.1384,
+          "recall": 0.9688,
+          "f1_score": 0.2422
+        }
+      },
+      "confusion_matrix": [
+        [
+          612,
+          0,
+          0,
+          0
+        ],
+        [
+          55,
+          3521,
+          4,
+          0
+        ],
+        [
+          1551,
+          435,
+          15462,
+          193
+        ],
+        [
+          1,
+          0,
+          0,
+          31
+        ]
+      ],
+      "classes": [
+        "BruteForce",
+        "DDoS",
+        "Normal",
+        "PortScan"
+      ]
+    },
+    "train_time_sec": 22.3,
+    "inference_time_sec": 4.50279,
+    "actual_train_samples": 25000
+  },
+  "XGBoost": {
+    "val": {
+      "model_name": "XGBoost (Val)",
+      "accuracy": 0.9996,
+      "macro_f1": 0.9913,
+      "weighted_f1": 0.9996,
+      "precision": 0.9998,
+      "recall": 0.9833,
+      "roc_auc": 0.9999,
+      "per_class": {
+        "BruteForce": {
+          "precision": 1.0,
+          "recall": 0.9967,
+          "f1_score": 0.9984
+        },
+        "DDoS": {
+          "precision": 0.9994,
+          "recall": 0.9992,
+          "f1_score": 0.9993
+        },
+        "Normal": {
+          "precision": 0.9996,
+          "recall": 0.9999,
+          "f1_score": 0.9997
+        },
+        "PortScan": {
+          "precision": 1.0,
+          "recall": 0.9375,
+          "f1_score": 0.9677
+        }
+      },
+      "confusion_matrix": [
+        [
+          610,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3577,
+          3,
+          0
+        ],
+        [
+          0,
+          2,
+          17639,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          30
+        ]
+      ],
+      "classes": [
+        "BruteForce",
+        "DDoS",
+        "Normal",
+        "PortScan"
+      ]
+    },
+    "test": {
+      "model_name": "XGBoost (Test)",
+      "accuracy": 0.9999,
+      "macro_f1": 0.9958,
+      "weighted_f1": 0.9999,
+      "precision": 0.9999,
+      "recall": 0.9918,
+      "roc_auc": 1.0,
+      "per_class": {
+        "BruteForce": {
+          "precision": 1.0,
+          "recall": 0.9984,
+          "f1_score": 0.9992
+        },
+        "DDoS": {
+          "precision": 0.9997,
+          "recall": 1.0,
+          "f1_score": 0.9999
+        },
+        "Normal": {
+          "precision": 0.9999,
+          "recall": 0.9999,
+          "f1_score": 0.9999
+        },
+        "PortScan": {
+          "precision": 1.0,
+          "recall": 0.9688,
+          "f1_score": 0.9841
+        }
+      },
+      "confusion_matrix": [
+        [
+          611,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          3580,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          17640,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          31
+        ]
+      ],
+      "classes": [
+        "BruteForce",
+        "DDoS",
+        "Normal",
+        "PortScan"
+      ]
+    },
+    "train_time_sec": 1.3735,
+    "inference_time_sec": 0.02383
+  }
+}

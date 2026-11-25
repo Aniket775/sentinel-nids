@@ -1,0 +1,4 @@
+Model,Accuracy,Macro-F1,Weighted-F1,Precision,Recall,ROC-AUC,Training Time (s),Inference Time (s)
+Random Forest,0.9999,0.992,0.9999,0.9922,0.9918,1.0,1.3933,0.02346
+SVM,0.8976,0.6358,0.9191,0.576,0.9572,0.9944,22.3,4.50279
+XGBoost,0.9999,0.9958,0.9999,0.9999,0.9918,1.0,1.3735,0.02383

@@ -1,0 +1,73 @@
+:root {
+  /* Terminal Color Palette - Green Default */
+  --void: #050806;
+  --panel: #0A100C;
+  --line: rgba(124, 255, 155, 0.18);
+  --text: #CFE9D6;
+  --dim: #6E8A77;
+  --phosphor: #7CFF9B;
+  --phosphor-glow: rgba(124, 255, 155, 0.4);
+
+  /* Semantic Target Threat Classes (Immutable Across Themes) */
+  --normal: #5EEAD4;
+  --ddos: #FF4D3D;
+  --portscan: #FFB000;
+  --bruteforce: #C77DFF;
+
+  /* Typography */
+  --font-mono: "IBM Plex Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
+  --font-display: "VT323", monospace;
+  --font-tabular: "JetBrains Mono", Menlo, Consolas, monospace;
+
+  /* Motion & Duration */
+  --motion-fast: 150ms;
+  --motion-base: 300ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="green"] {
+  --void: #050806;
+  --panel: #0A100C;
+  --line: rgba(124, 255, 155, 0.18);
+  --text: #CFE9D6;
+  --dim: #6E8A77;
+  --phosphor: #7CFF9B;
+  --phosphor-glow: rgba(124, 255, 155, 0.4);
+}
+
+[data-theme="amber"] {
+  --void: #080603;
+  --panel: #120D06;
+  --line: rgba(255, 176, 0, 0.18);
+  --text: #F2DDB0;
+  --dim: #997A4D;
+  --phosphor: #FFB000;
+  --phosphor-glow: rgba(255, 176, 0, 0.4);
+}
+
+[data-theme="ice"] {
+  --void: #030608;
+  --panel: #060E12;
+  --line: rgba(125, 211, 252, 0.18);
+  --text: #D6EAF5;
+  --dim: #5E8299;
+  --phosphor: #7DD3FC;
+  --phosphor-glow: rgba(125, 211, 252, 0.4);
+}
+
+[data-theme="red-team"] {
+  --void: #0A0404;
+  --panel: #140808;
+  --line: rgba(255, 77, 61, 0.22);
+  --text: #FFD2CF;
+  --dim: #99524D;
+  --phosphor: #FF4D3D;
+  --phosphor-glow: rgba(255, 77, 61, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: 0ms;
+    --motion-base: 0ms;
+  }
+}

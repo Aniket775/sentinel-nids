@@ -1,0 +1,42 @@
+{
+  "label_classes": [
+    "BruteForce",
+    "DDoS",
+    "Normal",
+    "PortScan"
+  ],
+  "selected_features": [
+    "Destination Port",
+    "Average Packet Size",
+    "Fwd Packet Length Mean",
+    "Subflow Fwd Bytes",
+    "Avg Fwd Segment Size",
+    "Packet Length Mean",
+    "Bwd Packet Length Mean",
+    "Fwd Packet Length Max",
+    "Total Length of Fwd Packets",
+    "Packet Length Variance",
+    "min_seg_size_forward",
+    "Avg Bwd Segment Size",
+    "Bwd Packet Length Std",
+    "Max Packet Length",
+    "Packet Length Std",
+    "Bwd Packets/s",
+    "Fwd Packet Length Std",
+    "Bwd Packet Length Max",
+    "Subflow Bwd Packets",
+    "Total Length of Bwd Packets",
+    "PSH Flag Count",
+    "Flow IAT Mean",
+    "Fwd IAT Max",
+    "Init_Win_bytes_forward",
+    "Fwd Packet Length Min"
+  ],
+  "feature_count": 25,
+  "selected_best_model": "XGBoost",
+  "selection_criteria": "Highest Macro-F1 score with robust minority class detection",
+  "created_at": "2026-11-25 21:07:10",
+  "test_accuracy": 0.9999,
+  "test_macro_f1": 0.9958,
+  "test_weighted_f1": 0.9999
+}

@@ -1,0 +1,15 @@
+Universal Public Live Links (Sentinel NIDS)
+===========================================
+Primary Public HTTPS Link:
+https://ahwvy-112-196-126-3.free.pinggy.net
+
+Mirror Public HTTPS Link:
+https://uznvo-112-196-126-3.run.pinggy-free.link
+
+Interactive API Docs:
+https://ahwvy-112-196-126-3.free.pinggy.net/docs
+
+Local Port: 8000
+Created: 2026-11-25 22:20:00 IST
+Tunnel Process: Active in background
+Reopen anytime with: make tunnel

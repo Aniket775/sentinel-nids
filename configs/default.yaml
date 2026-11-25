@@ -1,0 +1,91 @@
+# Default Configuration for Network Intrusion Detection System (NIDS)
+
+project:
+  name: "Network Intrusion Detection System"
+  version: "1.0.0"
+  random_seed: 42
+
+paths:
+  raw_data_dir: "data/raw"
+  interim_data_dir: "data/interim"
+  processed_data_dir: "data/processed"
+  demo_data_dir: "data/demo"
+  demo_file: "data/demo/cicids2017_demo.csv"
+  models_dir: "models"
+  registry_dir: "models/registry"
+  selected_model_dir: "models/selected_model"
+  reports_dir: "reports"
+  metrics_file: "reports/metrics.json"
+  comparison_file: "reports/model_comparison.csv"
+  confusion_matrix_dir: "reports/confusion_matrices"
+  figures_dir: "reports/figures"
+  explanations_dir: "reports/explanations"
+
+data:
+  label_column: "Label"
+  target_classes:
+    - "Normal"
+    - "DDoS"
+    - "PortScan"
+    - "BruteForce"
+  raw_label_mapping:
+    "BENIGN": "Normal"
+    "DDoS": "DDoS"
+    "PortScan": "PortScan"
+    "FTP-Patator": "BruteForce"
+    "SSH-Patator": "BruteForce"
+  split:
+    train_ratio: 0.70
+    val_ratio: 0.15
+    test_ratio: 0.15
+    stratify: true
+    random_state: 42
+  sample_limits:
+    max_train_records: 120000
+    svm_train_sample: 25000
+
+features:
+  selection_method: "random_forest_importance"
+  top_k_features: 25
+  variance_threshold: 0.0
+  correlation_threshold: 0.98
+  excluded_columns:
+    - "Flow ID"
+    - "Source IP"
+    - "Source Port"
+    - "Destination IP"
+    - "Timestamp"
+    - "External IP"
+
+models:
+  random_forest:
+    n_estimators: 100
+    max_depth: 20
+    min_samples_split: 5
+    min_samples_leaf: 2
+    class_weight: "balanced"
+    n_jobs: -1
+    random_state: 42
+  svm:
+    C: 1.0
+    kernel: "rbf"
+    gamma: "scale"
+    class_weight: "balanced"
+    probability: true
+    max_iter: 5000
+    random_state: 42
+  xgboost:
+    n_estimators: 100
+    max_depth: 6
+    learning_rate: 0.1
+    subsample: 0.8
+    colsample_bytree: 0.8
+    eval_metric: "mlogloss"
+    random_state: 42
+    n_jobs: -1
+
+explainability:
+  shap_sample_size: 200
+  tree_explainer_models:
+    - "random_forest"
+    - "xgboost"
