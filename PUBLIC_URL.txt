@@ -1,15 +1,17 @@
 Universal Public Live Links (Sentinel NIDS)
 ===========================================
 Primary Public HTTPS Link:
-https://ahwvy-112-196-126-3.free.pinggy.net
+https://gxflh-117-203-246-44.free.pinggy.net
 
 Mirror Public HTTPS Link:
-https://uznvo-112-196-126-3.run.pinggy-free.link
+https://eurfg-117-203-246-44.run.pinggy-free.link
+
+Cloudflare Edge Link:
+https://operational-orientation-measurement-packages.trycloudflare.com
 
 Interactive API Docs:
-https://ahwvy-112-196-126-3.free.pinggy.net/docs
+https://gxflh-117-203-246-44.free.pinggy.net/docs
 
 Local Port: 8000
-Created: 2026-11-25 22:20:00 IST
-Tunnel Process: Active in background
+Last Updated: 2026-11-26 02:07:00 IST
 Reopen anytime with: make tunnel
